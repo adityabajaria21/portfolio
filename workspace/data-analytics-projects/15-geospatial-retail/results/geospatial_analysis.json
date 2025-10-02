@@ -1,0 +1,187 @@
+{
+  "top_recommendations": [
+    {
+      "location_id": "LOC0052",
+      "city": "New York",
+      "latitude": 40.91703964227141,
+      "longitude": -73.95748248947704,
+      "recommendation_score": 1246.938504217205,
+      "weighted_score": 61.10770041652911,
+      "annual_roi": 30.183879260394573,
+      "risk_score": 24.298731825949147,
+      "estimated_monthly_revenue": 1330209.9281204208,
+      "monthly_profit": 503064.65433990955,
+      "key_strengths": [
+        "High-income demographics",
+        "Low competition"
+      ],
+      "potential_concerns": [
+        "Limited parking"
+      ]
+    },
+    {
+      "location_id": "LOC0005",
+      "city": "Houston",
+      "latitude": 29.793526343140357,
+      "longitude": -95.27224548728776,
+      "recommendation_score": 1171.9568727348249,
+      "weighted_score": 52.901938179720425,
+      "annual_roi": 28.37917502040687,
+      "risk_score": 21.854516766690658,
+      "estimated_monthly_revenue": 1245851.5937155492,
+      "monthly_profit": 472986.25034011446,
+      "key_strengths": [
+        "High foot traffic"
+      ],
+      "potential_concerns": []
+    },
+    {
+      "location_id": "LOC0410",
+      "city": "Phoenix",
+      "latitude": 33.4181114756201,
+      "longitude": -111.93939002054857,
+      "recommendation_score": 1028.9358275736195,
+      "weighted_score": 52.13578115690204,
+      "annual_roi": 24.88033233756036,
+      "risk_score": 35.658891957779744,
+      "estimated_monthly_revenue": 1116085.0647692066,
+      "monthly_profit": 414672.205626006,
+      "key_strengths": [
+        "High-income demographics"
+      ],
+      "potential_concerns": [
+        "Limited parking"
+      ]
+    },
+    {
+      "location_id": "LOC0322",
+      "city": "Houston",
+      "latitude": 29.823612094722783,
+      "longitude": -95.43207475600019,
+      "recommendation_score": 907.8941592150559,
+      "weighted_score": 60.14551767046528,
+      "annual_roi": 21.63883693470258,
+      "risk_score": 8.587626206167316,
+      "estimated_monthly_revenue": 967201.800775201,
+      "monthly_profit": 360647.2822450431,
+      "key_strengths": [
+        "High-income demographics",
+        "Low competition",
+        "Excellent accessibility"
+      ],
+      "potential_concerns": []
+    },
+    {
+      "location_id": "LOC0252",
+      "city": "Chicago",
+      "latitude": 41.97134348709547,
+      "longitude": -87.67131002889634,
+      "recommendation_score": 819.6825577672273,
+      "weighted_score": 51.087658116493515,
+      "annual_roi": 19.66452105438991,
+      "risk_score": 36.666738274832895,
+      "estimated_monthly_revenue": 945037.1554681561,
+      "monthly_profit": 327742.0175731651,
+      "key_strengths": [
+        "High-income demographics",
+        "Low competition"
+      ],
+      "potential_concerns": [
+        "Limited highway access",
+        "Limited parking"
+      ]
+    },
+    {
+      "location_id": "LOC0440",
+      "city": "Chicago",
+      "latitude": 42.07018744192103,
+      "longitude": -87.57651917135432,
+      "recommendation_score": 750.6065766031005,
+      "weighted_score": 51.214717199571666,
+      "annual_roi": 17.874846439805882,
+      "risk_score": 24.36583934481746,
+      "estimated_monthly_revenue": 808376.8399570814,
+      "monthly_profit": 297914.10733009805,
+      "key_strengths": [
+        "High-income demographics"
+      ],
+      "potential_concerns": []
+    },
+    {
+      "location_id": "LOC0345",
+      "city": "New York",
+      "latitude": 40.62289609378781,
+      "longitude": -74.04181784041377,
+      "recommendation_score": 692.4490008881471,
+      "weighted_score": 59.52502158576468,
+      "annual_roi": 16.283108853986935,
+      "risk_score": 13.426809528180954,
+      "estimated_monthly_revenue": 738278.6646010831,
+      "monthly_profit": 271385.1475664489,
+      "key_strengths": [
+        "High-income demographics",
+        "Low competition",
+        "Excellent accessibility"
+      ],
+      "potential_concerns": []
+    },
+    {
+      "location_id": "LOC0102",
+      "city": "Houston",
+      "latitude": 29.730845875985345,
+      "longitude": -95.35456844864234,
+      "recommendation_score": 674.2155245974955,
+      "weighted_score": 50.22892327075249,
+      "annual_roi": 16.025400591489397,
+      "risk_score": 34.46034185190745,
+      "estimated_monthly_revenue": 771056.7534113991,
+      "monthly_profit": 267090.0098581566,
+      "key_strengths": [
+        "High-income demographics"
+      ],
+      "potential_concerns": [
+        "Limited parking"
+      ]
+    },
+    {
+      "location_id": "LOC0338",
+      "city": "Los Angeles",
+      "latitude": 33.96579300479119,
+      "longitude": -118.26776624604376,
+      "recommendation_score": 660.0987181014416,
+      "weighted_score": 51.54643468044536,
+      "annual_roi": 15.612020011142723,
+      "risk_score": 25.003281082227858,
+      "estimated_monthly_revenue": 713619.396406843,
+      "monthly_profit": 260200.33351904538,
+      "key_strengths": [
+        "High-income demographics",
+        "Excellent accessibility"
+      ],
+      "potential_concerns": []
+    },
+    {
+      "location_id": "LOC0034",
+      "city": "Chicago",
+      "latitude": 41.93473401305191,
+      "longitude": -87.54661818238948,
+      "recommendation_score": 649.4178214878224,
+      "weighted_score": 54.80876818899905,
+      "annual_roi": 15.262916091023008,
+      "risk_score": 15.111647143487682,
+      "estimated_monthly_revenue": 679205.036490422,
+      "monthly_profit": 254381.9348503835,
+      "key_strengths": [
+        "High-income demographics",
+        "Excellent accessibility"
+      ],
+      "potential_concerns": []
+    }
+  ],
+  "analysis_summary": {
+    "total_locations_analyzed": 500,
+    "viable_locations": 422,
+    "average_roi": "417.6%",
+    "best_city": "Los Angeles"
+  }
+}

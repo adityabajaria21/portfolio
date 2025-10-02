@@ -1,0 +1,20 @@
+{
+  "dataset_summary": {
+    "products_analyzed": 50,
+    "total_records": 18250,
+    "total_revenue": "$287,083,801.47",
+    "analysis_period": "2023-01-01 00:00:00 to 2023-12-31 00:00:00"
+  },
+  "pricing_analysis": {
+    "products_with_elasticity_data": 50,
+    "average_price_elasticity": "-1.07",
+    "potential_revenue_impact": "$5,714.47",
+    "pricing_strategies_developed": 5
+  },
+  "key_insights": [
+    "Average price elasticity: -1.07",
+    "Total revenue optimization potential: $5,714",
+    "Most elastic category: Clothing",
+    "Best revenue opportunity: Electronics Product 17"
+  ]
+}

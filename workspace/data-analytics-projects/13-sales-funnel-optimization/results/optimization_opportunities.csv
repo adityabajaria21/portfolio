@@ -1,0 +1,6 @@
+from_stage,to_stage,users_lost,drop_off_rate,potential_revenue_lost
+Product Page View,Add to Cart,42529,0.6709631616313008,11771586.959342709
+Landing Page View,Product Page View,36615,0.36615,10097626.193149615
+Add to Cart,Checkout Started,2698,0.1293632527809743,747272.0302483372
+Payment Info,Purchase Complete,1213,0.0708693620004674,335083.1495448274
+Checkout Started,Payment Info,1042,0.057385174578698094,287756.1112721117
