@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Calendar, Target, TrendingUp, ExternalLink, FileText, Code, Database } from 'lucide-react';
+import { ArrowLeft, Calendar, Target, TrendingUp, ExternalLink, FileText, Code, Database, BarChart3, Presentation, BookOpen, ClipboardList, FileCheck } from 'lucide-react';
 import { projects } from '@/data/projects';
 
 export default function ProjectDetail() {
@@ -252,6 +252,72 @@ export default function ProjectDetail() {
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-4">
+                  {project.githubLinks.dataset && (
+                    <Button 
+                      variant="outline" 
+                      className="h-auto p-4 flex flex-col items-center gap-2"
+                      onClick={() => window.open(project.githubLinks!.dataset, '_blank')}
+                    >
+                      <Database className="w-8 h-8 text-purple-600" />
+                      <span className="font-semibold">Data</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
+                  )}
+                  {project.githubLinks.technicalDoc && (
+                    <Button 
+                      variant="outline" 
+                      className="h-auto p-4 flex flex-col items-center gap-2"
+                      onClick={() => window.open(project.githubLinks!.technicalDoc, '_blank')}
+                    >
+                      <BookOpen className="w-8 h-8 text-blue-600" />
+                      <span className="font-semibold">Technical Document</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
+                  )}
+                  {project.githubLinks.executiveSummary && (
+                    <Button 
+                      variant="outline" 
+                      className="h-auto p-4 flex flex-col items-center gap-2"
+                      onClick={() => window.open(project.githubLinks!.executiveSummary, '_blank')}
+                    >
+                      <ClipboardList className="w-8 h-8 text-green-600" />
+                      <span className="font-semibold">Executive Business Summary</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
+                  )}
+                  {project.githubLinks.code && (
+                    <Button 
+                      variant="outline" 
+                      className="h-auto p-4 flex flex-col items-center gap-2"
+                      onClick={() => window.open(project.githubLinks!.code, '_blank')}
+                    >
+                      <Code className="w-8 h-8 text-gray-600" />
+                      <span className="font-semibold">Code</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
+                  )}
+                  {project.githubLinks.codeAnalysis && (
+                    <Button 
+                      variant="outline" 
+                      className="h-auto p-4 flex flex-col items-center gap-2"
+                      onClick={() => window.open(project.githubLinks!.codeAnalysis, '_blank')}
+                    >
+                      <FileCheck className="w-8 h-8 text-indigo-600" />
+                      <span className="font-semibold">Code Analysis Document</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
+                  )}
+                  {project.githubLinks.dataDictionary && (
+                    <Button 
+                      variant="outline" 
+                      className="h-auto p-4 flex flex-col items-center gap-2"
+                      onClick={() => window.open(project.githubLinks!.dataDictionary, '_blank')}
+                    >
+                      <FileText className="w-8 h-8 text-orange-600" />
+                      <span className="font-semibold">Data Dictionary</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
+                  )}
                   {project.githubLinks.report && (
                     <Button 
                       variant="outline" 
@@ -263,25 +329,25 @@ export default function ProjectDetail() {
                       <ExternalLink className="w-4 h-4" />
                     </Button>
                   )}
-                  {project.githubLinks.code && (
+                  {project.githubLinks.dashboard && (
                     <Button 
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
-                      onClick={() => window.open(project.githubLinks!.code, '_blank')}
+                      onClick={() => window.open(project.githubLinks!.dashboard, '_blank')}
                     >
-                      <Code className="w-8 h-8 text-green-600" />
-                      <span className="font-semibold">Analysis & Code</span>
+                      <BarChart3 className="w-8 h-8 text-indigo-600" />
+                      <span className="font-semibold">Power BI Dashboard</span>
                       <ExternalLink className="w-4 h-4" />
                     </Button>
                   )}
-                  {project.githubLinks.dataset && (
+                  {project.githubLinks.presentation && (
                     <Button 
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
-                      onClick={() => window.open(project.githubLinks!.dataset, '_blank')}
+                      onClick={() => window.open(project.githubLinks!.presentation, '_blank')}
                     >
-                      <Database className="w-8 h-8 text-purple-600" />
-                      <span className="font-semibold">Dataset 01</span>
+                      <Presentation className="w-8 h-8 text-teal-600" />
+                      <span className="font-semibold">Executive Presentation</span>
                       <ExternalLink className="w-4 h-4" />
                     </Button>
                   )}

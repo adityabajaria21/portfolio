@@ -10,7 +10,6 @@ export interface Project {
   challenges: string[];
   results: string[];
   duration: string;
-  teamSize: number;
   problemStatement?: string;
   objective?: string;
   outcomesAndImpact?: string[];
@@ -19,6 +18,12 @@ export interface Project {
     code?: string;
     dataset?: string;
     dataset2?: string;
+    dashboard?: string;
+    presentation?: string;
+    technicalDoc?: string;
+    executiveSummary?: string;
+    codeAnalysis?: string;
+    dataDictionary?: string;
   };
 }
 
@@ -53,7 +58,6 @@ export const projects: Project[] = [
       'Competitive pitch presentation to Nile management board'
     ],
     duration: 'Academic Project',
-    teamSize: 1,
     problemStatement: 'A leading South American e-commerce marketplace, Nile, engaged our team to design and deploy a machine learning solution that predicts which customers are likely to leave positive post-purchase reviews. The goal is to focus review prompts and incentives on high likelihood customers, improve review volume and quality, and reduce campaign waste. The work formed part of a competitive pitch to win a major contract to deliver this predictive capability, using the platform\'s historical orders, deliveries, payments, and review data.',
     objective: 'Build a prediction model for customer review outcomes, with emphasis on identifying likely 4 to 5 star reviewers, and present the business case and technical approach to Nile\'s management board as part of the pitch.',
     outcomesAndImpact: [
@@ -98,7 +102,6 @@ export const projects: Project[] = [
       'Delivered statistical evidence for policy and business decision making'
     ],
     duration: 'Academic Project',
-    teamSize: 1,
     problemStatement: 'Task 1: Cardiovascular Disease in England - Public health leaders need to understand which local factors are most associated with Cardiovascular Disease prevalence across English local authorities, so they can focus prevention budgets where impact is highest. The dataset includes CVD prevalence by area, plus rates of overweight, smoking, poverty, average wellbeing, and population counts. Task 2: Customer Satisfaction in Furniture Retail - A national furniture retailer wants to improve store level customer satisfaction by acting on the most influential operational and workforce drivers. The data covers each store\'s customer satisfaction score, staff job satisfaction score, delivery times for large and custom items, whether a new product range is stocked, and the store\'s socio economic segment.',
     objective: 'Task 1: Quantify the relationship between CVD prevalence and the key risk factors, identify the most actionable levers by effect size, and present an executive ready visual that shows the effect of poverty on CVD, with plain English conclusions for policy and funding decisions. Task 2: Measure the effect of delivery times, job satisfaction, product range status, and store segment on customer satisfaction, then test whether the impact of delivery time varies across low, medium, and high SES stores.',
     outcomesAndImpact: [
@@ -141,7 +144,6 @@ export const projects: Project[] = [
       'Provided statistical evidence and power analysis for full deployment recommendation'
     ],
     duration: 'Academic Project',
-    teamSize: 1,
     problemStatement: 'A consumer lender needs to improve the quality of loan approval decisions. Loan officers currently use an older computer model when reviewing applications, which coincides with high error rates, approving bad loans and rejecting good loans. A new model has been built by another team. The business ran a randomized experiment, control uses the current model, treatment uses the new model, to determine whether the new assistance reduces costly decision errors and improves officer performance.',
     objective: 'Analyze experimental data to evaluate decision quality under control versus treatment, using the recorded metrics, Type I and II errors before and after seeing model predictions, agreement and conflict with the model, decision revisions, confidence, and completion counts, then recommend whether to continue, stop, or redesign the experiment, and outline the expected financial impact if the new model is deployed.',
     outcomesAndImpact: [
@@ -181,7 +183,6 @@ export const projects: Project[] = [
       'Delivered comprehensive business intelligence reports with clear visualizations'
     ],
     duration: 'Academic Project',
-    teamSize: 1,
     problemStatement: 'Decision makers need timely, trustworthy insights generated from consistent data. The team must implement the schema, populate it with realistic synthetic data at useful scale, and deliver SQL driven reports that answer the original business questions. The result should allow managers to track performance, identify issues, and support decisions without manual data wrangling.',
     objective: 'Implement the schema in SQLite using SQL DDL with all constraints applied. Generate synthetic yet realistic datasets with sufficient variety and at least 500 records per focus entity, then load the database. Build SQL queries that produce the agreed business reports, add clear visualisations, and summarise insights in a short report.',
     outcomesAndImpact: [
@@ -224,7 +225,6 @@ export const projects: Project[] = [
       'Successfully implemented production-ready pipeline with modular, extensible architecture'
     ],
     duration: 'Academic Project',
-    teamSize: 1,
     problemStatement: 'Leaders need accurate answers that reflect specialised, current, and sometimes proprietary knowledge, which a standalone LLM cannot reliably provide. This project builds an advanced RAG system that grounds an LLM on a curated domain corpus, retrieves the right passages at the right time, and generates source backed responses that outperform a plain LLM on accuracy, relevance, and depth. The work covers a production minded pipeline, from data ingestion and storage through retrieval and re ranking to controlled generation, with clear benchmarks for quality, latency, and cost.',
     objective: 'Select a high value domain and justify why RAG is required. Source and preprocess the corpus, apply semantic or dynamic chunking, generate embeddings, and load a vector database. Implement baseline retrieval, for example cosine similarity, then add at least one recent advancement, for example hybrid keyword plus vector retrieval, reranking with a specialised model, HyDE style query expansion, iterative or multi hop retrieval, and generation strategies such as step back prompting or self refinement. Design a prompt template that integrates retrieved context with citations. Evaluate on a diverse query set, easy, ambiguous, domain specific, and report measurable lift on retrieval precision and nDCG, answer accuracy and citation faithfulness, along with latency and cost. Document failure cases and propose next steps, for example fine tuning components, alternative retrievers, or multi modal RAG, so the system is ready for stakeholder review and deployment planning.',
     outcomesAndImpact: [
@@ -237,6 +237,107 @@ export const projects: Project[] = [
       report: 'https://github.com/adityabajaria21/Masters_Projects/blob/382d31ad859d9c270e4b029daa77f43c8bccd292/Gen%20AI/Report%20Advanced%20Retrieval-Augmented%20Generation%20(RAG).pdf',
       code: 'https://github.com/adityabajaria21/Masters_Projects/blob/382d31ad859d9c270e4b029daa77f43c8bccd292/Gen%20AI/Advanced%20Retrieval-Augmented%20Generation%20(RAG).ipynb',
       dataset: 'https://github.com/adityabajaria21/Masters_Projects/blob/78847b51ba3729899f1071adb4979c8aaecd7daa/Gen%20AI/heart_anatomy.pdf'
+    }
+  },
+  {
+    id: 'education-project-1',
+    title: 'Graduate Destinations Analysis for School of Law',
+    description: 'Comprehensive Power BI analysis identifying underperformance in law graduate destinations, benchmarking against sector standards, and delivering actionable recommendations to improve employment outcomes.',
+    domain: 'Education',
+    technologies: ['Advanced Excel (Pivot Tables, VLOOKUP)', 'Power BI', 'DAX', 'Power Query', 'Data Visualization'],
+    status: 'completed' as const,
+    impact: 'Identified key drivers of graduate underperformance and delivered evidence-based action plan to improve employment outcomes by 5-8 percentage points',
+    keyFeatures: [
+      '🔗 End-to-end Power BI report (GO dataset) - Single PBIX with cleaned Graduate Outcomes (GO) data, modelled for fast slice-and-dice by cohort, programme, award level, demographic attributes, and region.',
+      '🧼 Data quality & preparation - Standardised outcome categories, resolved nulls and inconsistent programme labels, derived cohort flags (e.g., UG/PG, FT/PT), and created conformed date table for time-series analysis.',
+      '📐 Semantic model & DAX measures - Reusable measures for core KPIs: % in full-time employment, % in further study, positive outcomes rate, unemployment rate, median salary, time-to-destination, and benchmarking deltas (School vs sector/region).',
+      '📊 Executive KPI overview - Top-level scorecards and traffic-light indicators highlighting variance from targets and from sector/regional baselines, with tooltips explaining drivers.',
+      '🧭 Drill-down diagnostics - Hierarchical visuals to trace underperformance from School → Department/Programme → Module group → Cohort → Student segments (e.g., domicile, ethnicity, gender, widening participation, disability, age band).',
+      '🗺️ Regional & sector context - Benchmark pages comparing outcomes against sector and local labour market proxies (industry mix, typical graduate salaries, regional employment rates) with clear "gap to benchmark" indicators.',
+      '⏱ Trend & seasonality - Year-over-year lines and cohort timelines to separate structural decline from one-off dips; rolling-12 measures smooth volatility for clearer trend reading.',
+      '🧪 Causal signals & drivers - Decomposition visuals (e.g., contribution waterfall) to show how programme mix, demographics, placement uptake, and region explain the outcome gap; sensitivity sliders to test "what if" shifts in mix.',
+      '🎯 Actionability layer - Prioritised actions panel linking each insight to an intervention (careers support, employer outreach, placement expansion, curriculum alignment), with expected impact and lead indicators.',
+      '🔍 Root-cause cards - Dynamic cards surface the top 3 risk drivers for any selected cohort/programme (e.g., "low placement rate", "regional salary drag", "employer concentration risk").',
+      '🧰 Usability features - Cross-filters, bookmark-driven narratives ("Overview → Drivers → Benchmark → Actions"), drill-through to programme fact sheets, and export-ready tables for committee packs.'
+    ],
+    challenges: [
+      'Integrating multiple data sources with inconsistent graduate outcome classifications',
+      'Building meaningful benchmarks against sector and regional performance standards',
+      'Translating complex analytical findings into actionable recommendations for academic leadership'
+    ],
+    results: [
+      'Identified root causes of graduate destination underperformance across programmes and demographics',
+      'Delivered comprehensive Power BI dashboard with drill-down capabilities for ongoing monitoring',
+      'Presented evidence-based action plan to senior leadership with clear implementation timeline'
+    ],
+    duration: 'Education Project',
+    problemStatement: 'The Head of the School of Law has approached the Operational Research team to undertake a short piece of analytical research with a requirement to create and deliver a short presentation to senior colleagues in the School of Law: "We have noticed that the destinations performance for our recent graduates is not quite where we believe it should be. We are wondering if there are any particular issues apparent within the data. Could you undertake a short piece of analysis to reveal what the issues could be; what may be causing them; whether or not any factors are issues common to the sector, industry and region (e.g. local market and graduate salary levels); and what the School may need to do about it. Present findings to senior team.',
+    objective: 'Identify and explain why recent School of Law graduate destinations are underperforming, using the provided Graduate Outcomes dataset to pinpoint the key drivers, quantify their impact, and benchmark results against likely sector, industry, and regional patterns. By the senior team meeting next week, deliver a concise presentation that translates findings into clear, evidence-based actions the School can take to improve graduate destinations.',
+    outcomesAndImpact: [
+      'What we found - Too many graduates land in non-graduate jobs or short-term study; unemployment is higher than we\'d expect for Law. Pay starts lower than regional/sector norms, with a clear gender gap. Results vary by programme, region, and attainment (many Lower Seconds). The West Midlands is the toughest market.',
+      'Why this matters - Lower-quality first jobs depress lifetime earnings, weaken our employer reputation, and hurt league-table metrics. Pay and role quality gaps risk equity concerns and OfS scrutiny. Weak local outcomes make it harder to recruit the next cohort.',
+      'What we recommend (do now vs next) - Now (0–3 months): Targeted careers coaching for at-risk groups (women, mature students, Lower Second track). Improve destination data capture (job title, employer, contract) to see real role quality. Launch West Midlands employer outreach; keep London pipelines warm.',
+      'Next (3–12 months) - Embed employability in assessment for programmes with weaker outcomes. Expand placements/clinics and alumni mentoring in underperforming cohorts. Work with admissions/teaching to lift attainment where Lower Seconds cluster.',
+      'Expected impact (6–18 months) - +5–8 pp shift from non-graduate/unemployment into graduate roles. £0.5–1k rise in median starting pay overall (£1–2k for women). Fewer Lower Second outcomes in targeted programmes.',
+      'How we\'ll measure success - Destination mix each quarter (graduate vs non-graduate vs unemployed). Median pay vs regional/sector benchmarks. Equity KPIs: gender pay gap; share of graduates in professional roles by segment. Place KPIs: West Midlands gaps vs London/South West. Leading indicators: placement uptake, employer meetings, alumni mentor matches.',
+      'Ownership & cadence - Careers team: targeted coaching, employer outreach (monthly report). Academic leads: curriculum/assessment actions (termly update). Data team: dashboard refresh & QA (monthly).',
+      'Net result: more graduates in better jobs, faster—closing pay gaps, lifting reputation, and improving recruitment and compliance metrics.'
+    ],
+    githubLinks: {
+      dataset: 'https://github.com/adityabajaria21/Projects/blob/c5fe260c63b26e4212c67661ded813f3a7b02060/Education%20Project/excellence%20university%20dataset.xlsx',
+      dashboard: 'https://github.com/adityabajaria21/Projects/blob/c5fe260c63b26e4212c67661ded813f3a7b02060/Education%20Project/Excellence%20University%20Assessment.pbix',
+      presentation: 'https://github.com/adityabajaria21/Projects/blob/c5fe260c63b26e4212c67661ded813f3a7b02060/Education%20Project/Excellence%20University%20Presentation.pptx'
+    }
+  },
+  {
+    id: 'ab-test-project-1',
+    title: 'SecureNet VPN A/B/C Landing Page Optimization',
+    description: 'Marketing case study evaluating A/B/C test to optimize landing experience for SecureNet VPN by testing different plan orders to increase clarity, transparency, and conversions.',
+    domain: 'Marketing Analytics',
+    technologies: ['Python', 'A/B/C Test', 'Advanced Statistics', 'Z-tests', 'Bonferroni correction', 'Power analysis', 'Data Visualization', 'Matplotlib', 'Seaborn', 'Funnel Analysis', 'plan-mix analysis', 'Exploratory Data Analysis (EDA)', 'Excel'],
+    status: 'completed' as const,
+    impact: 'Identified that current plan order (A) should be maintained as reordering delivered no statistically significant uplift, saving engineering resources and redirecting focus to high-value segments',
+    keyFeatures: [
+      '• A/B/C experiment setup with unbiased split, MDE and power planned in advance.',
+      '• Clean data pipeline: session de-duplication, bot filtering, schema normalization.',
+      '• KPI framework: primary conversion rate; guardrails for refunds, support tickets, bounce; revenue lens via ARPU.',
+      '• Segmentation: country and device level conversion, plan-mix distribution, source channel cuts.',
+      '• Statistical testing: proportions tests, confidence intervals, multiple-comparison control, sensitivity checks.',
+      '• Funnel analytics: visits to engaged to signup to paid; drop-off diagnostics.',
+      '• Visuals for decision-making: conversion with error bars, plan-mix, segment lift, cohort trends.',
+      '• Clear recommendation criteria: ship only with significant lift and guardrails passing; quantified risk.',
+      '• Reproducible codebase: documented Python/SQL, parameterized config, results notebook.',
+      '• Leadership deliverables: 1-page executive summary and ≤5-page technical report with next-test roadmap.'
+    ],
+    challenges: [
+      'Designing unbiased 3-way split experiment with adequate statistical power',
+      'Managing multiple comparison corrections while maintaining business relevance',
+      'Balancing statistical rigor with practical business decision-making timelines'
+    ],
+    results: [
+      'Demonstrated no statistically significant difference between plan order variants',
+      'Identified main conversion leak in signup → paid funnel step',
+      'Recommended focus shift from layout changes to behavior-based targeting for power users'
+    ],
+    duration: 'Marketing Case Study',
+    problemStatement: 'Marketing Case Study\nThe primary objective of this case study is to evaluate your analytical skills by conducting an A/B/C test to optimize the landing experience for SecureNet VPN. The goal is to identify the best plan order that increases clarity, transparency, and conversions.\nAt SecureNet, we are committed to growing the number of people who benefit from a secure and private internet. Optimizing the landing experience is crucial for ensuring clarity, transparency, and increased conversions.\nHypothesis: The hypothesis for the A/B/C test is that different plan orders (A: 1/24/12, B: 1/12/24, C: 24/12/1) will have varying impacts on user conversion rates. The control group (A) will be compared against two variants (B and C) to determine which plan order results in the highest conversion rate.',
+    objective: 'Identify and recommend the landing-page plan order that achieves the highest statistically significant uplift in sign-ups for SecureNet VPN without harming clarity, transparency, or guardrail metrics (e.g., bounce rate, refund/cancel rate, support tickets). This will be done by designing and analysing an unbiased A/B/C experiment (A: 1/24/12, B: 1/12/24, C: 24/12/1), quantifying overall and per-country conversion, and estimating variant lift with confidence intervals to support a decisive ship/no-ship recommendation.\n\nSpecific aims:\n• Set up a clean 3-way split with power to detect a predefined MDE, define primary KPI (conversion rate) and secondary KPIs (plan card CTR, bounce, time to purchase, refunds/cancels, support tickets, NPS/clarity proxy).\n• Collect the right data (exposure, variant, user/session ID, country, device, source, timestamps) with bot filtering and deduping.\n• Analyse data quality, compute overall and country-level conversion, test variant effects (with controls for country/device/source), and check guardrails.\n• Recommend the winning variant (B or C vs control A) only if uplift is significant and guardrails pass; otherwise iterate with next test.',
+    outcomesAndImpact: [
+      'Bottom line decision - Keep current plan order (A). Reordering plans delivered no statistically significant uplift in paid conversion (control ≈ 1.88%; B −1.56% lift, p=0.502; C −0.57% lift, p=0.805). This was a well-powered test (≈99.9%), so the null result is reliable.',
+      'Resource & risk implications - Avoids low-ROI work. Shipping B or C would spend engineering time for no measurable gain; recommendation is to maintain A.\n• Guardrails steady. No meaningful change in ARPU or plan mix across variants; ~64% of purchases remain 1-month.',
+      'Where the money is - Main leak in the funnel is signup → paid; pre-purchase UI tweaks aren\'t moving the needle. Focus post-signup onboarding, in-app value messaging, and checkout nudges.\n• High-value "power user" segment identified: highly engaged users buy 12/24-month plans more often; corrected analysis shows long-term plan share rising from ~31% → 35% when counted properly. Targeting this group is the fastest path to LTV uplift.',
+      'Commercial impact (directional) - Redirecting tests from low-impact layout changes to behaviour-based offers for power users is expected to shift mix toward annual plans, raising ARPU/LTV without increasing paid traffic spend.',
+      'Next moves - Run a targeted experiment: for high-engagement users, present an annual-plan incentive at checkout; measure plan-mix shift and 30-/90-day retention.',
+      'How we\'ll track success - Primary: Paid conversion, ARPU, plan-mix.\n• Funnel KPI: signup→paid step-through rate.\n• Segment KPI: power-user identification rate and their annual-plan take-up.',
+      'Net result: we save build time on a non-moving lever, and re-invest in a targeted path that can grow LTV by converting high-engagement users into longer-term plans.'
+    ],
+    githubLinks: {
+      dataset: 'https://github.com/adityabajaria21/Projects/blob/c5fe260c63b26e4212c67661ded813f3a7b02060/AB%20Testing/SecureNetMarketingCaseStudy.csv',
+      technicalDoc: 'https://github.com/adityabajaria21/Projects/blob/c5fe260c63b26e4212c67661ded813f3a7b02060/AB%20Testing/Aditya%20Bajaria%20Technical%20Documentation.pdf',
+      executiveSummary: 'https://github.com/adityabajaria21/Projects/blob/c5fe260c63b26e4212c67661ded813f3a7b02060/AB%20Testing/Aditya%20Bajaria%20Executive%20Summary.pdf',
+      code: 'https://github.com/adityabajaria21/Projects/blob/c5fe260c63b26e4212c67661ded813f3a7b02060/AB%20Testing/Marketing%20Data%20Analyst%20A_B%20Code.py',
+      codeAnalysis: 'https://github.com/adityabajaria21/Projects/blob/c5fe260c63b26e4212c67661ded813f3a7b02060/AB%20Testing/Aditya%20Bajaria%20Code%20Analysis%20Documentation.pdf',
+      dataDictionary: 'https://github.com/adityabajaria21/Projects/blob/704adb7b2ee77d32511d674dc62850d1105e39ac/AB%20Testing/data%20dictionary.txt'
     }
   }
 ];
