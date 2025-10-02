@@ -1,0 +1,60 @@
+$ cd /workspace/shadcn-ui && pnpm run build
+
+
+> shadcnui@ build /workspace/shadcn-ui
+> vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 1673 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.12 kB │ gzip:   0.55 kB
+dist/assets/index-RNeLG0sa.css   71.98 kB │ gzip:  12.16 kB
+dist/assets/index-DaLcxKQM.js   400.66 kB │ gzip: 122.51 kB
+✓ built in 5.93s
+$ cd /workspace/shadcn-ui && pnpm run build
+
+
+> shadcnui@ build /workspace/shadcn-ui
+> vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 1673 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.12 kB │ gzip:   0.55 kB
+dist/assets/index-CR3DtGHu.css   74.78 kB │ gzip:  12.80 kB
+dist/assets/index-BDtsk-Hi.js   397.97 kB │ gzip: 122.42 kB
+✓ built in 6.09s
+$ cd /workspace/shadcn-ui && pnpm run build
+
+
+> shadcnui@ build /workspace/shadcn-ui
+> vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 1673 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.12 kB │ gzip:   0.55 kB
+dist/assets/index-RNeLG0sa.css   71.98 kB │ gzip:  12.16 kB
+dist/assets/index-BKTiOrCq.js   400.66 kB │ gzip: 122.51 kB
+✓ built in 5.63s
+$ cd /workspace/shadcn-ui && pnpm run build
+
+
+> shadcnui@ build /workspace/shadcn-ui
+> vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 1673 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.12 kB │ gzip:   0.55 kB
+dist/assets/index-80zt6ccm.css   71.87 kB │ gzip:  12.14 kB
+dist/assets/index-DMmQgFOy.js   396.85 kB │ gzip: 121.91 kB
+✓ built in 6.11s
