@@ -1,0 +1,122 @@
+$ find /workspace -type d -name "*data-analytics*" | head -10
+/workspace/data-analytics-portfolio
+$ ls -la /workspace/data-analytics-projects/
+
+ls: cannot access '/workspace/data-analytics-projects/': No such file or directory
+$ cd /workspace && mkdir -p data-analytics-projects
+
+$ cd /workspace/data-analytics-projects/05-sentiment-analysis-reviews && python src/sentiment_analysis_pipeline.py
+
+Traceback (most recent call last):
+  File "/workspace/data-analytics-projects/05-sentiment-analysis-reviews/src/sentiment_analysis_pipeline.py", line 13, in <module>
+    import nltk
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/nltk/__init__.py", line 146, in <module>
+    from nltk.chunk import *
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/nltk/chunk/__init__.py", line 155, in <module>
+    from nltk.chunk.api import ChunkParserI
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/nltk/chunk/api.py", line 13, in <module>
+    from nltk.chunk.util import ChunkScore
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/nltk/chunk/util.py", line 12, in <module>
+    from nltk.tag.mapping import map_tag
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/nltk/tag/__init__.py", line 72, in <module>
+    from nltk.tag.sequential import (
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/nltk/tag/sequential.py", line 26, in <module>
+    from nltk.classify import NaiveBayesClassifier
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/nltk/classify/__init__.py", line 97, in <module>
+    from nltk.classify.scikitlearn import SklearnClassifier
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/nltk/classify/scikitlearn.py", line 38, in <module>
+    from sklearn.feature_extraction import DictVectorizer
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/sklearn/__init__.py", line 83, in <module>
+    from .base import clone
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/sklearn/base.py", line 19, in <module>
+    from .utils import _IS_32BIT
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/sklearn/utils/__init__.py", line 27, in <module>
+    from .murmurhash import murmurhash3_32
+  File "sklearn/utils/murmurhash.pyx", line 1, in init sklearn.utils.murmurhash
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+$ cd /workspace/data-analytics-projects/05-sentiment-analysis-reviews && python src/simple_sentiment_pipeline.py
+
+🚀 Starting Customer Review Sentiment Analysis...
+✅ Generated 10,000 customer reviews
+   - Categories: 6
+   - Date range: 2023-01-01 00:00:00 to 2024-01-01 00:00:00
+   - Average rating: 3.20
+🔄 Performing sentiment analysis...
+✅ Sentiment analysis complete!
+   - Positive reviews: 4,533
+   - Negative reviews: 2,990
+   - Neutral reviews: 2,477
+
+✅ Sentiment Analysis Complete!
+📁 Results saved:
+   - results/sentiment_analysis_dashboard.html
+   - results/sentiment_analysis_data.csv
+   - results/sentiment_recommendations.json
+   - results/sentiment_summary.json
+
+📊 Key Results:
+   - Total Reviews: 10,000
+   - Positive Sentiment: 45.3%
+   - Categories Analyzed: 6
+$ cd /workspace/data-analytics-projects/06-real-estate-price-prediction && python src/real_estate_pipeline.py
+
+Traceback (most recent call last):
+  File "/workspace/data-analytics-projects/06-real-estate-price-prediction/src/real_estate_pipeline.py", line 13, in <module>
+    from sklearn.model_selection import train_test_split
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/sklearn/__init__.py", line 83, in <module>
+    from .base import clone
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/sklearn/base.py", line 19, in <module>
+    from .utils import _IS_32BIT
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/sklearn/utils/__init__.py", line 27, in <module>
+    from .murmurhash import murmurhash3_32
+  File "sklearn/utils/murmurhash.pyx", line 1, in init sklearn.utils.murmurhash
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+$ cd /workspace/data-analytics-projects/07-market-basket-analysis && python src/market_basket_pipeline.py
+
+🚀 Starting Market Basket Analysis...
+Traceback (most recent call last):
+  File "/workspace/data-analytics-projects/07-market-basket-analysis/src/market_basket_pipeline.py", line 440, in <module>
+    results = basket_system.run_complete_analysis()
+  File "/workspace/data-analytics-projects/07-market-basket-analysis/src/market_basket_pipeline.py", line 373, in run_complete_analysis
+    self.generate_transaction_data()
+  File "/workspace/data-analytics-projects/07-market-basket-analysis/src/market_basket_pipeline.py", line 60, in generate_transaction_data
+    product, category = np.random.choice(all_products)
+  File "numpy/random/mtrand.pyx", line 970, in numpy.random.mtrand.RandomState.choice
+ValueError: a must be 1-dimensional
+$ cd /workspace/data-analytics-projects/08-ab-testing-analysis && python src/ab_testing_pipeline.py
+
+🚀 Starting A/B Testing Analysis...
+✅ Generated 10,000 A/B test records
+   - Tests: 5
+   - Date range: 2024-01-01 00:00:00 to 2024-02-01 00:00:00
+   - Overall conversion rate: 13.27%
+🔄 Performing statistical tests...
+✅ Statistical analysis complete!
+   - Tests analyzed: 5
+   - Statistically significant: 3
+   - Average p-value: 0.1632
+
+✅ A/B Testing Analysis Complete!
+📁 Results saved:
+   - results/ab_testing_dashboard.html
+   - results/ab_test_data.csv
+   - results/statistical_test_results.csv
+   - results/ab_testing_recommendations.json
+   - results/ab_testing_summary.json
+
+📊 Key Results:
+   - Users Analyzed: 10,000
+   - Tests Conducted: 5
+   - Significant Results: 3
+   - Average Improvement: 24.16%
+$ cd /workspace/data-analytics-projects/09-customer-retention-cohort && python src/cohort_analysis_pipeline.py
+
+🚀 Starting Customer Retention & Cohort Analysis...
+Traceback (most recent call last):
+  File "/workspace/data-analytics-projects/09-customer-retention-cohort/src/cohort_analysis_pipeline.py", line 369, in <module>
+    results = cohort_system.run_complete_analysis()
+  File "/workspace/data-analytics-projects/09-customer-retention-cohort/src/cohort_analysis_pipeline.py", line 299, in run_complete_analysis
+    self.generate_customer_data()
+  File "/workspace/data-analytics-projects/09-customer-retention-cohort/src/cohort_analysis_pipeline.py", line 41, in generate_customer_data
+    while (current_date - acquisition_date).days < lifetime_days:
+AttributeError: 'numpy.timedelta64' object has no attribute 'days'

@@ -1,0 +1,5 @@
+$ find /workspace -type d -name "*data-analytics*" | head -10
+/workspace/data-analytics-portfolio
+$ ls -la /workspace/data-analytics-projects/
+
+ls: cannot access '/workspace/data-analytics-projects/': No such file or directory

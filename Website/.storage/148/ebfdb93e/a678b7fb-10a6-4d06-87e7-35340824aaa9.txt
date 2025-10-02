@@ -1,0 +1,15 @@
+$ cd /workspace/shadcn-ui && pnpm run build
+
+
+> shadcnui@ build /workspace/shadcn-ui
+> vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 1673 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.12 kB │ gzip:   0.55 kB
+dist/assets/index-D6zwMOfn.css   74.82 kB │ gzip:  12.80 kB
+dist/assets/index-CKLb9C-Y.js   397.95 kB │ gzip: 122.42 kB
+✓ built in 6.08s
