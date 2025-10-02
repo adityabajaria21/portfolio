@@ -1,6 +1,0 @@
-,current_avg_price,price_elasticity,strategy,recommendation,suggested_price_adjustment,expected_revenue_impact
-Home,148.8655388609008,-0.9666426979800157,Value-Based Pricing,Balance price and volume optimization,0.02,289.9240241033496
-Sports,120.58897780347613,-1.298735903217713,Value-Based Pricing,Balance price and volume optimization,0.02,234.97721584512655
-Books,23.838454396902204,-0.7469426063005905,Premium Pricing,Increase margins through premium pricing,0.08,178.06205338363836
-Electronics,445.8793637538905,-1.0697154619948834,Value-Based Pricing,Balance price and volume optimization,0.02,871.3409874524423
-Clothing,81.67397238427458,-1.6692009924423026,Competitive Pricing,Focus on volume through competitive pricing,-0.05,-446.4580245390068

@@ -1,3 +1,0 @@
-$ cd /workspace/data-analytics-projects && find . -name "*.py" -exec grep -l "sklearn" {} \;
-./05-sentiment-analysis-reviews/src/sentiment_analysis_pipeline.py
-./06-real-estate-price-prediction/src/real_estate_pipeline.py

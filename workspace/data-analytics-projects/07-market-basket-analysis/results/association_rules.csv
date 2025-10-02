@@ -1,2 +1,0 @@
-antecedent,consequent,support,confidence,lift
-[np.str_('Bread')],['Milk'],0.28096,0.8026052676683997,2.3005195702487953

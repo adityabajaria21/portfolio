@@ -1,3 +1,0 @@
-$ cd /workspace && mkdir ecommerce-clv-analysis && cd ecommerce-clv-analysis
-$ cd /workspace/ecommerce-clv-analysis && mkdir -p data/raw data/processed notebooks src visualizations reports
-
