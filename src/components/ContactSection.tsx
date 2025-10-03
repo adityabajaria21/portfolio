@@ -58,6 +58,7 @@ export default function ContactSection() {
           <div className="flex flex-col justify-center space-y-4">
             <Button 
               onClick={handleResumeDownload}
+              data-new-tab-url="/Aditya_Bajaria_CV.pdf"
               size="lg"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
