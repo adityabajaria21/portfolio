@@ -51,6 +51,7 @@ export default function Index() {
           </div>
           <Button 
             onClick={handleResumeDownload}
+            data-new-tab-url="/Aditya_Bajaria_CV.pdf"
             className="bg-blue-600 hover:bg-blue-700 text-white absolute right-6 top-1/2 transform -translate-y-1/2"
           >
             Download Resume
@@ -102,7 +103,7 @@ export default function Index() {
               >
                 Explore Portfolio <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" onClick={handleResumeDownload}>
+              <Button size="lg" variant="outline" onClick={handleResumeDownload} data-new-tab-url="/Aditya_Bajaria_CV.pdf">
                 Download Resume
               </Button>
             </div>
