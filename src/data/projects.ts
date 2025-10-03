@@ -24,6 +24,8 @@ export interface Project {
     executiveSummary?: string;
     codeAnalysis?: string;
     dataDictionary?: string;
+    instructions?: string;
+    liveDashboard?: string;
   };
 }
 
@@ -290,7 +292,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 'ab-test-project-1',
+    id: 'marketing-analytics-project-1',
     title: 'SecureNet VPN A/B/C Landing Page Optimization',
     description: 'Marketing case study evaluating A/B/C test to optimize landing experience for SecureNet VPN by testing different plan orders to increase clarity, transparency, and conversions.',
     domain: 'Marketing Analytics',
@@ -321,14 +323,14 @@ export const projects: Project[] = [
     ],
     duration: 'Marketing Case Study',
     problemStatement: 'Marketing Case Study\nThe primary objective of this case study is to evaluate your analytical skills by conducting an A/B/C test to optimize the landing experience for SecureNet VPN. The goal is to identify the best plan order that increases clarity, transparency, and conversions.\nAt SecureNet, we are committed to growing the number of people who benefit from a secure and private internet. Optimizing the landing experience is crucial for ensuring clarity, transparency, and increased conversions.\nHypothesis: The hypothesis for the A/B/C test is that different plan orders (A: 1/24/12, B: 1/12/24, C: 24/12/1) will have varying impacts on user conversion rates. The control group (A) will be compared against two variants (B and C) to determine which plan order results in the highest conversion rate.',
-    objective: 'Identify and recommend the landing-page plan order that achieves the highest statistically significant uplift in sign-ups for SecureNet VPN without harming clarity, transparency, or guardrail metrics (e.g., bounce rate, refund/cancel rate, support tickets). This will be done by designing and analysing an unbiased A/B/C experiment (A: 1/24/12, B: 1/12/24, C: 24/12/1), quantifying overall and per-country conversion, and estimating variant lift with confidence intervals to support a decisive ship/no-ship recommendation.\n\nSpecific aims:\n• Set up a clean 3-way split with power to detect a predefined MDE, define primary KPI (conversion rate) and secondary KPIs (plan card CTR, bounce, time to purchase, refunds/cancels, support tickets, NPS/clarity proxy).\n• Collect the right data (exposure, variant, user/session ID, country, device, source, timestamps) with bot filtering and deduping.\n• Analyse data quality, compute overall and country-level conversion, test variant effects (with controls for country/device/source), and check guardrails.\n• Recommend the winning variant (B or C vs control A) only if uplift is significant and guardrails pass; otherwise iterate with next test.',
+    objective: 'Identify and recommend the landing-page plan order that achieves the highest statistically significant uplift in sign-ups for SecureNet VPN without harming clarity, transparency, or guardrail metrics (e.g., bounce rate, refund/cancel rate, support tickets). This will be done by designing and analysing an unbiased A/B/C experiment (A: 1/24/12, B: 1/12/24, C: 24/12/1), quantifying overall and per-country conversion, and estimating variant lift with confidence intervals to support a decisive ship/no-ship recommendation.\n\n Specific aims:\n• Set up a clean 3-way split with power to detect a predefined MDE, define primary KPI (conversion rate) and secondary KPIs (plan card CTR, bounce, time to purchase, refunds/cancels, support tickets, NPS/clarity proxy).\n• Collect the right data (exposure, variant, user/session ID, country, device, source, timestamps) with bot filtering and deduping.\n• Analyse data quality, compute overall and country-level conversion, test variant effects (with controls for country/device/source), and check guardrails.\n• Recommend the winning variant (B or C vs control A) only if uplift is significant and guardrails pass; otherwise iterate with next test.',
     outcomesAndImpact: [
       'Bottom line decision - Keep current plan order (A). Reordering plans delivered no statistically significant uplift in paid conversion (control ≈ 1.88%; B −1.56% lift, p=0.502; C −0.57% lift, p=0.805). This was a well-powered test (≈99.9%), so the null result is reliable.',
       'Resource & risk implications - Avoids low-ROI work. Shipping B or C would spend engineering time for no measurable gain; recommendation is to maintain A.\n• Guardrails steady. No meaningful change in ARPU or plan mix across variants; ~64% of purchases remain 1-month.',
       'Where the money is - Main leak in the funnel is signup → paid; pre-purchase UI tweaks aren\'t moving the needle. Focus post-signup onboarding, in-app value messaging, and checkout nudges.\n• High-value "power user" segment identified: highly engaged users buy 12/24-month plans more often; corrected analysis shows long-term plan share rising from ~31% → 35% when counted properly. Targeting this group is the fastest path to LTV uplift.',
       'Commercial impact (directional) - Redirecting tests from low-impact layout changes to behaviour-based offers for power users is expected to shift mix toward annual plans, raising ARPU/LTV without increasing paid traffic spend.',
       'Next moves - Run a targeted experiment: for high-engagement users, present an annual-plan incentive at checkout; measure plan-mix shift and 30-/90-day retention.',
-      'How we\'ll track success - Primary: Paid conversion, ARPU, plan-mix.\n• Funnel KPI: signup→paid step-through rate.\n• Segment KPI: power-user identification rate and their annual-plan take-up.',
+      'How we\'ll track success\n - Primary: Paid conversion, ARPU, plan-mix.\n• Funnel KPI: signup→paid step-through rate.\n• Segment KPI: power-user identification rate and their annual-plan take-up.',
       'Net result: we save build time on a non-moving lever, and re-invest in a targeted path that can grow LTV by converting high-engagement users into longer-term plans.'
     ],
     githubLinks: {
@@ -338,6 +340,56 @@ export const projects: Project[] = [
       code: 'https://github.com/adityabajaria21/Projects/blob/c5fe260c63b26e4212c67661ded813f3a7b02060/AB%20Testing/Marketing%20Data%20Analyst%20A_B%20Code.py',
       codeAnalysis: 'https://github.com/adityabajaria21/Projects/blob/c5fe260c63b26e4212c67661ded813f3a7b02060/AB%20Testing/Aditya%20Bajaria%20Code%20Analysis%20Documentation.pdf',
       dataDictionary: 'https://github.com/adityabajaria21/Projects/blob/704adb7b2ee77d32511d674dc62850d1105e39ac/AB%20Testing/data%20dictionary.txt'
+    }
+  },
+  {
+    id: 'marketing-analytics-project-2',
+    title: 'FinCar Marketing Budget Optimization & Funnel Analytics',
+    description: 'Comprehensive marketing analytics project optimizing FinCar\'s marketing spend to maximize funded loans through data-driven segment analysis and funnel optimization.',
+    domain: 'Marketing Analytics',
+    technologies: ['Python', 'Excel', 'SQL', 'Tableau', 'Funnel analytics', 'Key Performance Indicators (KPI) Metrics', 'Pricing insight', 'Executive storytelling', 'Data Visualization', 'EDA - Exploratory Data Analysis', 'ETL'],
+    status: 'completed' as const,
+    impact: 'Delivered 6-10% lift in funded loans through evidence-based budget reallocation and segment optimization, improving marketing ROI and cost per funded loan by 8-12%',
+    keyFeatures: [
+      '• End-to-end funnel view: application to approval to funded, with clear rates and drop-off points by segment.',
+      '• Segment performance: cuts by Age band, Car type, Area, Loan amount, Deposit ratio, and APR to find high-yield audiences.',
+      '• Marketing ROI lens: ranked "funded loans per 1,000 applications" to show where budget lifts outcomes most.',
+      '• Pricing and terms insight: relationships between APR, deposit ratio, and conversion after approval to guide offer design.',
+      '• Fairness and compliance checks: simple monitors for systematic gaps by Area or Age with recommended follow-up reviews.',
+      '• Data quality pipeline: cleaning, type casting, outlier checks, and derived fields such as deposit ratio and loan bands.',
+      '• Decision visuals: Tableau pages for Funnel, Segments, Pricing Levers, and Recommendations, built for exec readouts.',
+      '• Actionable playbook: top 3 to 5 target segments with expected uplift and quick wins to fix low-conversion segments.',
+      '• Reproducible analysis: documented Python notebook for metrics, segmentation, and scenario sizing.',
+      '• Leadership deliverables: 1-page executive summary and concise technical appendix for auditability.'
+    ],
+    challenges: [
+      'Analyzing complex multi-stage funnel with multiple conversion points',
+      'Balancing marketing efficiency with fairness and compliance requirements',
+      'Translating statistical insights into actionable budget allocation recommendations'
+    ],
+    results: [
+      'Identified high-yield customer segments with superior funded loan conversion rates',
+      'Delivered comprehensive Tableau dashboard for ongoing marketing optimization',
+      'Provided evidence-based budget reallocation plan with expected 6-10% funded loan uplift'
+    ],
+    duration: 'Marketing Analytics Project',
+    problemStatement: 'FinCar\'s marketing spend must drive more funded loans, not just applications. We lack a clear view of which segments by age, car type, area, deposit, loan amount, and APR are most likely to be approved and to proceed to funding after approval. Without this visibility, budget may flow to segments that create volume but few funded loans, or to segments where pricing and deposit terms suppress conversion. We need a data-driven view of the application to approval to funded funnel to focus spend on the highest-yield, lowest-waste opportunities within our risk and fairness standards.',
+    objective: 'Deliver an evidence-based plan for where FinCar should invest marketing budget to maximize incremental funded loans and unit economics:\n• Quantify the funnel: approval rate, post-approval conversion rate, and overall funded-loan rate by segment (Age, Car_type, Area, Loan_amount, Deposit, APR).\n• Identify profit levers: where APR and deposit levels correlate with higher approval and funding, and where small offer changes could unlock more funded loans without harming clarity or fairness.\n• Prioritize segments: rank by funded loans per 1,000 applications and a cost-to-acquire proxy using conversion efficiency.\n• Apply guardrails: surface equity and fairness risks by area and age bands, and define monitoring and transparency steps.\n• Produce an action list: top 3 to 5 investment targets with expected uplift, plus segments to de-prioritize or fix due to low conversion or weak economics.\nSuccess means a defensible budget shift toward segments that convert applications into approved and funded loans at a higher rate, improving marketing ROI and customer fairness for FinCar.',
+    outcomesAndImpact: [
+      'What changed - We moved from application volume to a funded-loan mindset by exposing the full application → approval → funded funnel and its drop-offs by segment.\n• Marketing now has a ranked list of target segments that convert to funded loans at a higher rate and better unit economics.',
+      'Commercial impact - Redirecting budget to the top segments is expected to lift funded loans by 6–10% at current spend levels.\n• Mix shift toward higher-quality segments and right-sized offers is projected to improve cost per funded loan by 8–12%.\n• Pricing and deposit guidance reduces post-approval fallout, improving approval→funded conversion by 3–5 percentage points.',
+      'Where to invest - Prioritised audiences with strong approval and funding propensity (for example, specific Age bands by Car type in urban areas with mid-range loan amounts and balanced deposit ratios).\n• De-prioritised segments that generate applications but rarely fund, preventing wasted impressions and sales effort.',
+      'Risk and fairness - Introduced simple equity checks across Area and Age to spot unintended disadvantages early.\n• Guardrails added to ensure that any pricing or deposit changes remain transparent and customer-fair.',
+      'Operating cadence - Tableau funnel and segment pages enable weekly budget reallocation based on funded-loan yield.\n• A Python notebook produces a repeatable scorecard: funded loans per 1,000 applications, approval→funded conversion, and CPA per funded loan proxy.',
+      'Next 90 days - Run two targeted campaigns in the top segments with the recommended APR and deposit ranges.\n• Track four KPIs: funded-loan rate, approval→funded conversion, cost per funded loan, and fairness deltas by Area and Age.\n• If lift holds for four consecutive weeks, scale budget by 20–30% into the winning segments and retire the bottom quartile.'
+    ],
+    githubLinks: {
+      dataset: 'https://github.com/adityabajaria21/Projects/blob/0c8bae512ae2322ea8a92a4a1640697d6b6980c9/Car%20Loan%20Finance/FinCar%20Dataset.csv',
+      instructions: 'https://github.com/adityabajaria21/Projects/blob/0c8bae512ae2322ea8a92a4a1640697d6b6980c9/Car%20Loan%20Finance/FinCar%20Finance%20Instructions.pdf',
+      executiveSummary: 'https://github.com/adityabajaria21/Projects/blob/0c8bae512ae2322ea8a92a4a1640697d6b6980c9/Car%20Loan%20Finance/FinCar%20Finance%20Executive%20Summary.pdf',
+      code: 'https://github.com/adityabajaria21/Projects/blob/0c8bae512ae2322ea8a92a4a1640697d6b6980c9/Car%20Loan%20Finance/FinCar%20Finance.ipynb',
+      dataDictionary: 'https://github.com/adityabajaria21/Projects/blob/0c8bae512ae2322ea8a92a4a1640697d6b6980c9/Car%20Loan%20Finance/data%20dictionary.txt',
+      liveDashboard: '<div class=\'tableauPlaceholder\' id=\'viz1759452117209\' style=\'position: relative\'><noscript><a href=\'#\'><img alt=\' \' src=\'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinCarFinanceDashboard&#47;Introduction&#47;1_rss.png\' style=\'border: none\' /></a></noscript><object class=\'tableauViz\'  style=\'display:none;\'><param name=\'host_url\' value=\'https%3A%2F%2Fpublic.tableau.com%2F\' /> <param name=\'embed_code_version\' value=\'3\' /> <param name=\'site_root\' value=\'\' /><param name=\'name\' value=\'FinCarFinanceDashboard&#47;Introduction\' /><param name=\'tabs\' value=\'yes\' /><param name=\'toolbar\' value=\'yes\' /><param name=\'static_image\' value=\'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinCarFinanceDashboard&#47;Introduction&#47;1.png\' /> <param name=\'animate_transition\' value=\'yes\'/><param name=\'display_static_image\' value=\'yes\' /><param name=\'display_spinner\' value=\'yes\' /><param name=\'display_overlay\' value=\'yes\' /><param name=\'display_count\' value=\'yes\' /><param name=\'language\' value=\'en-GB\' /></object></div>                <script type=\'text/javascript\'>                    var divElement = document.getElementById(\'viz1759452117209\');                    var vizElement = divElement.getElementsByTagName(\'object\')[0];                    vizElement.style.width=\'1016px\';vizElement.style.height=\'1014px\';                    var scriptElement = document.createElement(\'script\');                    scriptElement.src = \'https://public.tableau.com/javascripts/api/viz_v1.js\';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>'
     }
   }
 ];
