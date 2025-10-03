@@ -10,6 +10,7 @@ export interface Project {
   challenges: string[];
   results: string[];
   duration: string;
+  image?: string;
   problemStatement?: string;
   objective?: string;
   outcomesAndImpact?: string[];
@@ -35,6 +36,7 @@ export const projects: Project[] = [
     title: 'E-commerce Customer Review Prediction Model',
     description: 'Machine learning solution to predict customers likely to leave positive post-purchase reviews for Nile, a leading South American e-commerce marketplace.',
     domain: 'Academic Projects',
+    image: '/images/academic_project_01.png',
     technologies: ['Python', 'Machine Learning', 'Excel', 'Data Visualization'],
     status: 'completed' as const,
     impact: 'Improved review volume and quality while reducing campaign waste through targeted review prompts',
@@ -84,6 +86,7 @@ export const projects: Project[] = [
     title: 'Statistical Analysis for Public Health & Retail',
     description: 'Dual statistical analysis project examining cardiovascular disease factors in England and customer satisfaction drivers in furniture retail using classical regression and hypothesis testing.',
     domain: 'Academic Projects',
+    image: '/images/academic_project_02.png',
     technologies: ['R', 'Excel', 'Exploratory Data Analysis', 'Classical Regression', 'NHST and Estimation', 'Hypothesis Tests', 'ANOVA', 'Multicollinearity Diagnostics', 'Data Visualization'],
     status: 'completed' as const,
     impact: 'Provided evidence-based insights for public health resource allocation and retail customer experience optimization',
@@ -125,6 +128,7 @@ export const projects: Project[] = [
     title: 'Consumer Lending A/B Test of Loan Review Assistance',
     description: 'Randomized experiment analyzing the effectiveness of a new loan approval model versus the current system, measuring decision quality improvements and officer performance metrics.',
     domain: 'Academic Projects',
+    image: '/images/academic_project_03.png',
     technologies: ['R', 'A/B Testing', 'Advanced Statistics', 'Confusion Matrix', 'Welch Two Sample T-Tests', 'Confidence Intervals', 'Effect Size - Cohen\'s d', 'Power Analysis', 'Excel', 'Data Visualization'],
     status: 'completed' as const,
     impact: 'Reduced loan approval errors by 32-45% and improved officer confidence, providing clear evidence for model deployment decisions',
@@ -164,6 +168,7 @@ export const projects: Project[] = [
     title: 'Implementation, Synthetic Data, and Business Insights',
     description: 'End-to-end data management solution implementing normalized database schema, generating realistic synthetic datasets, and delivering SQL-driven business intelligence reports.',
     domain: 'Academic Projects',
+    image: '/images/academic_project_04.png',
     technologies: ['Python', 'SQL', 'Relational Schema Design', 'Data Visualization', 'matplotlib', 'seaborn'],
     status: 'completed' as const,
     impact: 'Created single source of truth for business operations with 500+ records per entity, enabling faster decision-making and consistent reporting',
@@ -205,6 +210,7 @@ export const projects: Project[] = [
     title: 'Advanced Retrieval-Augmented Generation (RAG)',
     description: 'Production-ready RAG system combining semantic and keyword search with reranking to deliver accurate, source-backed responses for specialized medical knowledge queries.',
     domain: 'Academic Projects',
+    image: '/images/academic_project_05.png',
     technologies: ['Python', 'Jupyter Notebook', 'Vector Search', 'Embeddings', 'LLM', 'Keyword Search', 'Hybrid Retrieval', 'Reranking', 'Hugging Face Transformers', 'Generative AI'],
     status: 'completed' as const,
     impact: 'Achieved 88% accuracy on medical queries with reduced hallucination risk through hybrid retrieval and strict evidence guardrails',
