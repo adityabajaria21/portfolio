@@ -17,7 +17,7 @@ export default function ProjectDashboard() {
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Project Not Found</h1>
-          <Button onClick={() => navigate('/')} variant="outline">
+          <Button onClick={() => navigate('/')} variant="outline" data-new-tab-url="/">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Portfolio
           </Button>
@@ -54,9 +54,10 @@ export default function ProjectDashboard() {
       <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
-            <Button 
-              onClick={() => navigate('/')} 
-              variant="ghost" 
+            <Button
+              onClick={() => navigate('/')}
+              variant="ghost"
+              data-new-tab-url="/"
               className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -69,6 +70,7 @@ export default function ProjectDashboard() {
                   onClick={() => window.open(project.githubUrl, '_blank')}
                   variant="outline"
                   size="sm"
+                  data-new-tab-url={project.githubUrl}
                 >
                   <Github className="w-4 h-4 mr-2" />
                   View Code
@@ -78,6 +80,7 @@ export default function ProjectDashboard() {
                 <Button 
                   onClick={() => window.open(project.demoUrl, '_blank')}
                   size="sm"
+                  data-new-tab-url={project.demoUrl}
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Live Demo
@@ -238,6 +241,7 @@ export default function ProjectDashboard() {
                       onClick={() => window.open(project.githubUrl, '_blank')}
                       variant="outline" 
                       className="w-full"
+                      data-new-tab-url={project.githubUrl}
                     >
                       <Github className="w-4 h-4 mr-2" />
                       View Source Code
@@ -249,6 +253,7 @@ export default function ProjectDashboard() {
                   <Button 
                     onClick={() => window.open(project.demoUrl, '_blank')}
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                    data-new-tab-url={project.demoUrl}                    
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     View Live Demo
