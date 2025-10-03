@@ -159,6 +159,7 @@ export default function ProjectCard({ project, onViewProject }: ProjectCardProps
         <div className="flex gap-2 pt-4 border-t border-gray-100 dark:border-gray-800">
           <Button 
             onClick={handleViewProject}
+            data-new-tab-url={`/project/${project.id}`}            
             className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0"
           >
             View Details
@@ -169,6 +170,7 @@ export default function ProjectCard({ project, onViewProject }: ProjectCardProps
               variant="outline"
               size="sm"
               onClick={handleGithubClick}
+              data-new-tab-url={project.githubUrl}
               className="border-gray-200 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-800"
             >
               <Github className="w-4 h-4" />
@@ -180,6 +182,7 @@ export default function ProjectCard({ project, onViewProject }: ProjectCardProps
               variant="outline"
               size="sm"
               onClick={handleDemoClick}
+              data-new-tab-url={project.demoUrl}
               className="border-gray-200 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-800"
             >
               <ExternalLink className="w-4 h-4" />
