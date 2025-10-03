@@ -132,7 +132,7 @@ export const projects: Project[] = [
     status: 'completed' as const,
     impact: 'Reduced loan approval errors by 32-45% and improved officer confidence, providing clear evidence for model deployment decisions',
     keyFeatures: [
-      '📊 Data Analysis and Visualisation - Profiled experiment activity and balance, day by day counts for control and treatment, verified where officers bypassed final model assisted decisions. Ran EDA to understand metric distributions and relationships before testing, then reported results for whole data versus a filtered set where model use was confirmed, to avoid diluting the treatment effect.',
+      '📊 Data Analysis and Visualization - Profiled experiment activity and balance, day by day counts for control and treatment, verified where officers bypassed final model assisted decisions. Ran EDA to understand metric distributions and relationships before testing, then reported results for whole data versus a filtered set where model use was confirmed, to avoid diluting the treatment effect.',
       '🔍 Data Preparation and Quality Assurance - Duplicate scans, NA checks, structure audits, outlier reviews, and consistency checks on agreement versus conflict totals. Removed incomplete experiments where officers did not complete final decisions with the model, yielding 100 control and 280 treatment officer day experiments, then aggregated to the loan officer level for analysis.',
       '📈 Metrics Engineered and Evaluated - Type I error rate, rejecting good loans, Type II error rate, approving bad loans. Agreement ratio with the model after exposure, decision revision ratio toward model advice, officer final confidence score after exposure.',
       '🔬 Statistical Methods and Inference - Welch two sample t tests to compare control and treatment on each metric. Confidence intervals around mean differences to express uncertainty. Effect sizes using Cohen\'s d with interpretation to show practical significance. Power analysis and sample size guidance using pwr.t.test for next phase design.',
@@ -168,7 +168,7 @@ export const projects: Project[] = [
     description: 'End-to-end data management solution implementing normalized database schema, generating realistic synthetic datasets, and delivering SQL-driven business intelligence reports.',
     domain: 'Academic Projects',
     image: '/images/academic_project_04.png',
-    technologies: ['Python', 'SQL', 'Relational Schema Design', 'Data Visualization', 'matplotlib', 'seaborn'],
+    technologies: ['Python', 'SQL', 'Relational Schema Design', 'Data Visualization', 'Matplotlib', 'Seaborn'],
     status: 'completed' as const,
     impact: 'Created single source of truth for business operations with 500+ records per entity, enabling faster decision-making and consistent reporting',
     keyFeatures: [
@@ -176,7 +176,7 @@ export const projects: Project[] = [
       '🎲 Synthetic Data in Python - pandas, NumPy, Faker, seeded generation with realistic business rules.',
       '🔄 Load and QA Pipeline - sqlite3 loaders, foreign keys enabled, duplicate and NA checks, structure audits.',
       '📊 SQL Analytics - KPI queries for reviews, delivery performance, refunds and revenue, product damage.',
-      '📈 Visualisation - concise matplotlib and seaborn charts tied to SQL outputs.'
+      '📈 Visualization - concise matplotlib and seaborn charts tied to SQL outputs.'
     ],
     challenges: [
       'Designing normalized schema while maintaining query performance',
@@ -189,7 +189,7 @@ export const projects: Project[] = [
       'Delivered comprehensive business intelligence reports with clear visualizations'
     ],
     duration: 'Academic Project',
-    problemStatement: 'Decision makers need timely, trustworthy insights generated from consistent data. The team must implement the schema, populate it with realistic synthetic data at useful scale, and deliver SQL driven reports that answer the original business questions. The result should allow managers to track performance, identify issues, and support decisions without manual data wrangling.',
+    problemStatement: 'Decision makers need timely, trustworthy insights generated from consistent data. Implement schema, populate it with realistic synthetic data at useful scale, and deliver SQL driven reports that answer the original business questions. The result should allow stakehoolders to track performance, identify issues, and support decisions without manual data wrangling.',
     objective: 'Implement the schema in SQLite using SQL DDL with all constraints applied. Generate synthetic yet realistic datasets with sufficient variety and at least 500 records per focus entity, then load the database. Build SQL queries that produce the agreed business reports, add clear visualisations, and summarise insights in a short report.',
     outcomesAndImpact: [
       'Single source of truth for core operations - A clean, normalized SQLite database with enforced relationships enables trustworthy reporting across sales, deliveries, refunds, reviews, and damage, so leaders are not reconciling spreadsheets or debating definitions.',
@@ -197,7 +197,7 @@ export const projects: Project[] = [
       'Clear view of refund leakage and margin impact - Financial analysis links refunds to categories and products, helping finance and product teams focus quality fixes where refund costs and refund rates are highest, improving contribution margin.',
       'Customer experience signals that drive action - Review analysis connects ratings to delivery conditions, product types, and locations, guiding post purchase messaging, courier choices for sensitive SKUs, and targeted CX interventions.',
       'Supply and quality control visibility - Distributor supply and product damage views surface upstream issues, batch delays, and common damage types, so procurement and warehouse teams can intervene earlier and reduce repeat incidents.',
-      'Reproducible, scalable foundation - The Python generator and loading pipeline let the team regenerate realistic datasets quickly, test schema changes safely, and keep the BI layer stable as requirements evolve, which shortens time to insight and de-risks future integrations.'
+      'Reproducible, scalable foundation - The Python generator and loading pipeline helped to regenerate realistic datasets quickly, test schema changes safely, and keep the BI layer stable as requirements evolve, which shortens time to insight and de-risks future integrations.'
     ],
     githubLinks: {
       report: 'https://github.com/adityabajaria21/Masters_Projects/blob/1a635a81b6579614fc932cf057fc1e5945ce6bdf/Data%20Management/DM_Group_28_Report.pdf',
@@ -210,7 +210,7 @@ export const projects: Project[] = [
     description: 'Production-ready RAG system combining semantic and keyword search with reranking to deliver accurate, source-backed responses for specialized medical knowledge queries.',
     domain: 'Academic Projects',
     image: '/images/academic_project_05.png',
-    technologies: ['Python', 'Jupyter Notebook', 'Vector Search', 'Embeddings', 'LLM', 'Keyword Search', 'Hybrid Retrieval', 'Reranking', 'Hugging Face Transformers', 'Generative AI'],
+    technologies: ['Python', 'Jupyter Notebook', 'Vector Search', 'Embeddings', 'Large Language Model (LLM)', 'Keyword Search', 'Hybrid Retrieval', 'Reranking', 'Hugging Face Transformers', 'Generative AI'],
     status: 'completed' as const,
     impact: 'Achieved 88% accuracy on medical queries with reduced hallucination risk through hybrid retrieval and strict evidence guardrails',
     keyFeatures: [
@@ -228,14 +228,14 @@ export const projects: Project[] = [
     ],
     results: [
       'Achieved 88% accuracy on medical knowledge queries with comprehensive evaluation',
-      'Demonstrated superior performance over baseline LLM in 20 of 26 test cases',
+      'Demonstrated superior performance over baseline LLM in 26 test cases',
       'Successfully implemented production-ready pipeline with modular, extensible architecture'
     ],
     duration: 'Academic Project',
     problemStatement: 'Leaders need accurate answers that reflect specialised, current, and sometimes proprietary knowledge, which a standalone LLM cannot reliably provide. This project builds an advanced RAG system that grounds an LLM on a curated domain corpus, retrieves the right passages at the right time, and generates source backed responses that outperform a plain LLM on accuracy, relevance, and depth. The work covers a production minded pipeline, from data ingestion and storage through retrieval and re ranking to controlled generation, with clear benchmarks for quality, latency, and cost.',
     objective: 'Select a high value domain and justify why RAG is required. Source and preprocess the corpus, apply semantic or dynamic chunking, generate embeddings, and load a vector database. Implement baseline retrieval, for example cosine similarity, then add at least one recent advancement, for example hybrid keyword plus vector retrieval, reranking with a specialised model, HyDE style query expansion, iterative or multi hop retrieval, and generation strategies such as step back prompting or self refinement. Design a prompt template that integrates retrieved context with citations. Evaluate on a diverse query set, easy, ambiguous, domain specific, and report measurable lift on retrieval precision and nDCG, answer accuracy and citation faithfulness, along with latency and cost. Document failure cases and propose next steps, for example fine tuning components, alternative retrievers, or multi modal RAG, so the system is ready for stakeholder review and deployment planning.',
     outcomesAndImpact: [
-      'Higher factual accuracy and depth - The RAG system answered 88 percent of test queries correctly and produced richer, textbook-like responses in 20 of 26 cases, compared with a plain LLM. This improves trust for knowledge intensive use cases.',
+      'Higher factual accuracy and depth - The RAG system answered 88 percent of test queries correctly and produced richer, textbook-like responses in 20 cases, compared with a plain LLM. This improves trust for knowledge intensive use cases.',
       'Better relevance to user intent - Hybrid retrieval and reranking increased contextual alignment, so answers matched medical terminology and query focus more consistently, which reduces follow up time for users.',
       'Reduced misinformation risk - Guardrails led the system to decline out-of-scope questions, for example generic anatomy outside the corpus, which lowers the risk of confident but wrong outputs in sensitive domains.',
       'Production minded design - The pipeline, parsing to chunking to embeddings to retrieval to generation to evaluation, is modular and extensible, so new documents or domains can be added without rework, and future enhancements, for example fine tuning or multimodal inputs, are straightforward.'
