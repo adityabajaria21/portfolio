@@ -36,17 +36,27 @@ export default function ProjectCard({ project, onViewProject }: ProjectCardProps
   return (
     <Card className="group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-0 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       <div className="relative overflow-hidden rounded-t-lg">
-        {/* Project Image */}
-        <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-          <div className="text-white text-center">
-            <TrendingUp className="w-12 h-12 mx-auto mb-2 opacity-80" />
-            <p className="text-sm opacity-90">{project.domain}</p>
+        {project.image ? (
+          <div className="h-48 bg-gray-100 dark:bg-gray-900">
+            <img
+              src={project.image}
+              alt={`${project.title} thumbnail`}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
-        </div>
+        ) : (
+          <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+            <div className="text-white text-center">
+              <TrendingUp className="w-12 h-12 mx-auto mb-2 opacity-80" />
+              <p className="text-sm opacity-90">{project.domain}</p>
+            </div>
+          </div>
+        )}
         
         {/* Status Badge */}
         <div className="absolute top-3 right-3">
-          <Badge 
+          <Badge
             variant={project.status === 'completed' ? 'default' : project.status === 'in-progress' ? 'secondary' : 'outline'}
             className={`${
               project.status === 'completed' 
