@@ -12,9 +12,7 @@ export default function ProfessionalSummary() {
       period: "Jan 2025 – Apr 2025",
       type: "Internship",
       achievements: [
-        "Researched and developed Python-based AI applications in finance, focusing on voice-command systems for secure data retrieval",
-        "Conducted competitive analysis of emerging FinTech tools, evaluating efficacy in investment analysis and data summarisation",
-        "Developed tools to convert voice queries into structured data commands for market trends analysis"
+        "Researched AI and NLP applications in finance, focusing on voice-command systems for secure data retrieval. Developed a proof-of-concept tool in Python that converted voice queries into structured SQL commands for market analysis. Presented findings on emerging FinTech tools, using Tableau to visualize competitive landscapes and identify key differentiators."
       ]
     },
     {
@@ -23,11 +21,7 @@ export default function ProfessionalSummary() {
       location: "India",
       period: "Feb 2022 – Aug 2024",
       achievements: [
-        "Delivered targeted metadata insights that influenced OTT client acquisition strategies, securing 3 new contracts",
-        "Streamlined recurring data analyses with Python and Tableau, accelerating business decisions by 45%",
-        "Developed reusable data solutions adopted team-wide, improving analyst efficiency by 65%",
-        "Restored client trust through root-cause analyses of data discrepancies impacting international accounts",
-        "Mentored junior analysts in ETL tools and dashboard best practices"
+        "Led a key initiative to automate reporting processes using Python and SQL (AWS Athena), reducing manual effort by 95% and cutting delivery times from 3 days to 6 hours. Delivered insights through Tableau and AWS QuickSight that accelerated business decisions by 45%, influenced client acquisition strategies, and solidified a role as the go-to analyst for new ETL tools like Talend Open Studio."
       ]
     },
     {
@@ -36,10 +30,7 @@ export default function ProfessionalSummary() {
       location: "India", 
       period: "May 2021 – Nov 2021",
       achievements: [
-        "Delivered critical customer satisfaction and brand insights for FMCG, retail, and telecom clients across Nordic markets",
-        "Identified and resolved key data discrepancies in large datasets, preventing distorted investment decisions",
-        "Standardised reporting templates across accounts, improving data consistency by 12%",
-        "Collaborated with senior consultants to communicate findings to executive audiences"
+        "Supported senior consultants by delivering brand health and customer satisfaction insights for major FMCG and telecom clients. Analyzed key marketing metrics using SQL, Excel, Power BI and SPSS, and standardized client-facing PowerPoint reporting templates to improve data consistency by 12%."
       ]
     },
     {
@@ -48,10 +39,7 @@ export default function ProfessionalSummary() {
       location: "India",
       period: "Jul 2020 – Apr 2021", 
       achievements: [
-        "Identified 15% sales growth opportunity in underinvested segments, informing strategic budget reallocation",
-        "Enhanced financial reporting integrity by replacing 4 manual workflows with scalable Python pipelines",
-        "Designed 6 consolidated real-time dashboards in Tableau and Looker Studio",
-        "Automated data quality checks, reducing reconciliation errors and accelerating reporting cycles by 30%"
+        "Modernized FMCG analytics by migrating legacy reports from R to Python, self-teaching the language to automate manual workflows and enhance financial reporting integrity. Subsequently designed the team's first consolidated dashboard using Google Looker and Tableau, helping stakeholders identify a 15% sales growth opportunity in a key market segment."
       ]
     }
   ];
@@ -152,14 +140,13 @@ export default function ProfessionalSummary() {
                   </>
                 )}
               </div>
-              <ul className="space-y-2">
+              <div className="space-y-2">
                 {exp.achievements.map((achievement, achIndex) => (
-                  <li key={achIndex} className="text-gray-700 dark:text-gray-300 flex items-start gap-2">
-                    <span className="text-blue-500 mt-1.5 flex-shrink-0">•</span>
-                    <span>{achievement}</span>
-                  </li>
+                  <p key={achIndex} className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    {achievement}
+                  </p>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </CardContent>

@@ -34,7 +34,7 @@ export default function Index() {
   const achievements = [
     { metric: '25+', label: 'Dashboards Designed' },
     { metric: '15+', label: 'ETL and Python Automation' },
-    { metric: '45%', label: 'Business and Team Efficiency' },
+    { metric: '45%', label: 'Business and Team Efficiency 📈' },
     { metric: '3+', label: 'Total Experience' }
   ];
 
@@ -69,9 +69,10 @@ export default function Index() {
             <p className="text-2xl text-gray-600 mb-8">
               Data-Driven Insights & Solutions
             </p>
-            <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Strategic data analyst skilled in uncovering insights that drive growth, improve efficiency, and support smarter decision-making. Known for bridging the gap between data and business teams through advanced analytics, machine learning, and statistical modelling.
-            </p>
+            <div className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+              <p>Strategic data analyst turning complex data into clear decisions.</p>
+              <p>Insights that power growth, streamline operations, and align teams to business goals.</p>
+            </div>
             
             {/* Contact Info */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 text-gray-600">

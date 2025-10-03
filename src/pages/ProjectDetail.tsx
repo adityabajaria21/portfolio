@@ -3,7 +3,23 @@ import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Calendar, Target, TrendingUp, ExternalLink, FileText, Code, Database, BarChart3, Presentation, BookOpen, ClipboardList, FileCheck } from 'lucide-react';
+import {
+  ArrowLeft,
+  Calendar,
+  Target,
+  TrendingUp,
+  ExternalLink,
+  FileText,
+  Code,
+  Database,
+  BarChart3,
+  Presentation,
+  BookOpen,
+  ClipboardList,
+  FileCheck,
+  NotebookPen,
+  Monitor
+} from 'lucide-react';
 import { projects } from '@/data/projects';
 
 export default function ProjectDetail() {
@@ -30,7 +46,13 @@ export default function ProjectDetail() {
       </div>
     );
   }
-
+  const openLiveDashboard = () => {
+    if (!project.githubLinks?.liveDashboard) {
+      return;
+    }
+    window.open(project.githubLinks.liveDashboard, '_blank', 'noopener,noreferrer');
+  };
+  
   // Function to format text with Task 1 and Task 2 separation
   const formatTaskText = (text: string) => {
     if (text.includes('Task 1:') && text.includes('Task 2:')) {
@@ -253,7 +275,7 @@ export default function ProjectDetail() {
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-4">
                   {project.githubLinks.dataset && (
-                    <Button 
+                    <Button
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.dataset, '_blank')}
@@ -263,8 +285,19 @@ export default function ProjectDetail() {
                       <ExternalLink className="w-4 h-4" />
                     </Button>
                   )}
+                  {project.githubLinks.instructions && (
+                    <Button
+                      variant="outline"
+                      className="h-auto p-4 flex flex-col items-center gap-2"
+                      onClick={() => window.open(project.githubLinks!.instructions, '_blank')}
+                    >
+                      <NotebookPen className="w-8 h-8 text-amber-600" />
+                      <span className="font-semibold">Code Instructions</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
+                  )}                  
                   {project.githubLinks.technicalDoc && (
-                    <Button 
+                    <Button
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.technicalDoc, '_blank')}
@@ -308,7 +341,7 @@ export default function ProjectDetail() {
                     </Button>
                   )}
                   {project.githubLinks.dataDictionary && (
-                    <Button 
+                    <Button
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.dataDictionary, '_blank')}
@@ -319,7 +352,7 @@ export default function ProjectDetail() {
                     </Button>
                   )}
                   {project.githubLinks.report && (
-                    <Button 
+                    <Button
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.report, '_blank')}
@@ -328,21 +361,21 @@ export default function ProjectDetail() {
                       <span className="font-semibold">Report</span>
                       <ExternalLink className="w-4 h-4" />
                     </Button>
-                  )}
-                  {project.githubLinks.dashboard && (
-                    <Button 
-                      variant="outline" 
+                    )}
+                  {project.githubLinks.liveDashboard && (
+                    <Button
+                      variant="outline"
                       className="h-auto p-4 flex flex-col items-center gap-2"
-                      onClick={() => window.open(project.githubLinks!.dashboard, '_blank')}
+                      onClick={openLiveDashboard}
                     >
-                      <BarChart3 className="w-8 h-8 text-indigo-600" />
-                      <span className="font-semibold">Power BI Dashboard</span>
+                      <Monitor className="w-8 h-8 text-sky-600" />
+                      <span className="font-semibold">Live Dashboard</span>
                       <ExternalLink className="w-4 h-4" />
                     </Button>
                   )}
                   {project.githubLinks.presentation && (
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.presentation, '_blank')}
                     >

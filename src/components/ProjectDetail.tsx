@@ -7,6 +7,19 @@ interface ProjectDetailProps {
 }
 
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ project }) => {
+  // Debug logging for FinCar project
+  if (project.id === 'marketing-analytics-project-2') {
+    console.log('FinCar Project Debug:', {
+      id: project.id,
+      title: project.title,
+      githubLinks: project.githubLinks,
+      hasInstructions: !!project.githubLinks?.instructions,
+      hasLiveDashboard: !!project.githubLinks?.liveDashboard,
+      instructionsValue: project.githubLinks?.instructions,
+      liveDashboardValue: project.githubLinks?.liveDashboard
+    });
+  }
+
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-8">
       {/* Header */}
