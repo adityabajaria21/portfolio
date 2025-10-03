@@ -38,7 +38,7 @@ export default function ProjectDetail() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Project Not Found</h1>
           <p className="text-gray-600 mb-8">The project you're looking for doesn't exist.</p>
-          <Button onClick={() => navigate('/')}>
+          <Button onClick={() => navigate('/')} data-new-tab-url="/">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Button>
@@ -88,6 +88,7 @@ export default function ProjectDetail() {
             <Button 
               variant="outline"
               onClick={() => navigate('/')}
+              data-new-tab-url="/"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Portfolio
@@ -279,6 +280,7 @@ export default function ProjectDetail() {
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.dataset, '_blank')}
+                      data-new-tab-url={project.githubLinks!.dataset}
                     >
                       <Database className="w-8 h-8 text-purple-600" />
                       <span className="font-semibold">Data</span>
@@ -290,6 +292,7 @@ export default function ProjectDetail() {
                       variant="outline"
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.instructions, '_blank')}
+                      data-new-tab-url={project.githubLinks!.instructions}
                     >
                       <NotebookPen className="w-8 h-8 text-amber-600" />
                       <span className="font-semibold">Code Instructions</span>
@@ -301,6 +304,7 @@ export default function ProjectDetail() {
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.technicalDoc, '_blank')}
+                      data-new-tab-url={project.githubLinks!.technicalDoc}
                     >
                       <BookOpen className="w-8 h-8 text-blue-600" />
                       <span className="font-semibold">Technical Document</span>
@@ -312,6 +316,7 @@ export default function ProjectDetail() {
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.executiveSummary, '_blank')}
+                      data-new-tab-url={project.githubLinks!.executiveSummary}
                     >
                       <ClipboardList className="w-8 h-8 text-green-600" />
                       <span className="font-semibold">Executive Business Summary</span>
@@ -323,6 +328,7 @@ export default function ProjectDetail() {
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.code, '_blank')}
+                      data-new-tab-url={project.githubLinks!.code}
                     >
                       <Code className="w-8 h-8 text-gray-600" />
                       <span className="font-semibold">Code</span>
@@ -334,6 +340,7 @@ export default function ProjectDetail() {
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.codeAnalysis, '_blank')}
+                      data-new-tab-url={project.githubLinks!.codeAnalysis}
                     >
                       <FileCheck className="w-8 h-8 text-indigo-600" />
                       <span className="font-semibold">Code Analysis Document</span>
@@ -345,6 +352,7 @@ export default function ProjectDetail() {
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.dataDictionary, '_blank')}
+                      data-new-tab-url={project.githubLinks!.dataDictionary}
                     >
                       <FileText className="w-8 h-8 text-orange-600" />
                       <span className="font-semibold">Data Dictionary</span>
@@ -356,6 +364,7 @@ export default function ProjectDetail() {
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.report, '_blank')}
+                      data-new-tab-url={project.githubLinks!.report}
                     >
                       <FileText className="w-8 h-8 text-blue-600" />
                       <span className="font-semibold">Report</span>
@@ -367,6 +376,7 @@ export default function ProjectDetail() {
                       variant="outline"
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={openLiveDashboard}
+                      data-new-tab-url={project.githubLinks!.liveDashboard}
                     >
                       <Monitor className="w-8 h-8 text-sky-600" />
                       <span className="font-semibold">Live Dashboard</span>
@@ -378,6 +388,7 @@ export default function ProjectDetail() {
                       variant="outline"
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.presentation, '_blank')}
+                      data-new-tab-url={project.githubLinks!.presentation}
                     >
                       <Presentation className="w-8 h-8 text-teal-600" />
                       <span className="font-semibold">Executive Presentation</span>
@@ -389,6 +400,7 @@ export default function ProjectDetail() {
                       variant="outline" 
                       className="h-auto p-4 flex flex-col items-center gap-2"
                       onClick={() => window.open(project.githubLinks!.dataset2, '_blank')}
+                      data-new-tab-url={project.githubLinks!.dataset2}
                     >
                       <Database className="w-8 h-8 text-orange-600" />
                       <span className="font-semibold">Dataset 02</span>
@@ -404,6 +416,7 @@ export default function ProjectDetail() {
           <div className="text-center">
             <Button 
               onClick={() => navigate('/')}
+              data-new-tab-url="/"
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white"
             >
