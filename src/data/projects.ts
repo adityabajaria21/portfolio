@@ -402,7 +402,7 @@ export const projects: Project[] = [
     title: 'Transaction Health & Partner Reconciliation',
     description:
       'Real-time payments monitoring and partner reconciliation that protects customer balances, reduces operational risk, and accelerates incident response.',
-    domain: 'FinTech & Payments',
+    domain: 'FinTech',
     image: '/images/fintech_project_01.png',
     technologies: ['Python', 'SQL','Google Looker Studio (Data Studio)','Excel','Google Sheets'
     ],
@@ -436,7 +436,7 @@ export const projects: Project[] = [
       'Repeatable incident playbook with daily reports and dashboards aligning operations, risk, and partner management'
     ],
     githubLinks: {
-      code: 'https://github.com/placeholder-code',
+      code: 'https://github.com/adityabajaria21/Projects/blob/6cb1ed9aa07bdff6d3eaffea4c8c425910c29356/FinTech/FinTech%20Python_SQL%20%20code.py',
       dataset: 'https://www.kaggle.com/datasets/ealtman2019/ibm-transactions-for-anti-money-laundering-aml/data',
       liveDashboard: 'https://lookerstudio.google.com/embed/reporting/c9c1663f-dfc7-40da-8836-6f0a3c6b6121/page/p_6j1r8bbxwd'
       
