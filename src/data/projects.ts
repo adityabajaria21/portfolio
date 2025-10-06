@@ -438,7 +438,7 @@ export const projects: Project[] = [
     githubLinks: {
       code: 'https://github.com/adityabajaria21/Projects/blob/6cb1ed9aa07bdff6d3eaffea4c8c425910c29356/FinTech/FinTech%20Python_SQL%20%20code.py',
       dataset: 'https://www.kaggle.com/datasets/ealtman2019/ibm-transactions-for-anti-money-laundering-aml/data',
-      liveDashboard: 'https://lookerstudio.google.com/embed/reporting/c9c1663f-dfc7-40da-8836-6f0a3c6b6121/page/p_6j1r8bbxwd'
+      liveDashboard: 'https://lookerstudio.google.com/embed/reporting/c9c1663f-dfc7-40da-8836-6f0a3c6b6121/page/p_93xloucxwd'
       
     }
   }
