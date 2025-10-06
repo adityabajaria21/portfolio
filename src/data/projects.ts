@@ -396,5 +396,49 @@ export const projects: Project[] = [
       dataDictionary: 'https://github.com/adityabajaria21/Projects/blob/0c8bae512ae2322ea8a92a4a1640697d6b6980c9/Car%20Loan%20Finance/data%20dictionary.txt',
       liveDashboard: 'https://public.tableau.com/views/FinCarFinanceDashboard/Introduction?:language=en-GB&publish=yes&:display_count=n&:origin=viz_share_link'
     }
+},
+  {
+    id: 'fintech-project-transaction-health',
+    title: 'Transaction Health & Partner Reconciliation',
+    description:
+      'Real-time payments monitoring and partner reconciliation that protects customer balances, reduces operational risk, and accelerates incident response.',
+    domain: 'FinTech & Payments',
+    image: '/images/fintech_project_01.png',
+    technologies: ['Python', 'SQL','Google Looker Studio (Data Studio)','Excel','Google Sheets'
+    ],
+    status: 'completed' as const,
+    impact:
+      'Sped up detection of payment health degradation, prioritized reconciliation workflows, and aligned operations with clear reporting cadence.',
+    keyFeatures: [
+      '⚡ Real-time monitoring with hourly success and volume KPIs per channel plus rolling 3-sigma anomaly detection for instant signal on degradation.',
+      '🤝 Automated partner reconciliation that matches ledger inflows/outflows to partner statements, tracking open breaks with reason codes and aging buckets.',
+      '🧭 Operational playbook featuring a one-page Looker Studio dashboard and daily on-call CSV to triage incidents quickly and consistently.',
+      '🛠️ Modular pipeline covering data normalization, ledger construction, partner statement simulation, reconciliation, summarization, alerting, and publication.'
+    ],
+    challenges: [
+      'Turning raw, inconsistent source feeds into trustworthy operational KPIs',
+      'Keeping reconciliation logic stable while mirroring partner reporting nuances',
+      'Designing anomaly detection that avoids alert fatigue yet surfaces true incidents fast'
+    ],
+    results: [
+      'Cut mean-time-to-detect by moving to hourly health checks with automated alerting',
+      'Improved ownership and accountability by grouping breaks by bank, direction, and financial impact',
+      'Enabled faster incident triage with standardized reporting assets across ops, risk, and partner teams'
+    ],
+    duration: 'FinTech Operations Project',
+    problemStatement:
+      'Payment operations need early warning on transaction health and a reliable way to reconcile internal activity with partner statements. Without this, failures go unnoticed, customer balances drift, and teams spend time chasing manually rather than fixing the right issues.',
+    objective:
+      '• Provide hourly success and volume KPIs by payment channel to detect degradation early.\n• Maintain a reconciliation posture by matching ledger movements to partner statements and tracking open breaks with aging.\n• Explain failures (missing inflow/outflow, amount mismatches) so responders know where to act.\n• Automate notifications (3-sigma alerts) and standardize reporting (daily CSV + dashboard).',
+    outcomesAndImpact: [
+      'Fewer unresolved breaks older than 24 hours by prioritizing the riskiest exceptions first',
+      'Lower customer impact through rapid identification of health drops and reconciliation gaps',
+      'Repeatable incident playbook with daily reports and dashboards aligning operations, risk, and partner management'
+    ],
+    githubLinks: {
+      code: 'https://github.com/placeholder-code',
+      dataset: 'https://github.com/placeholder-dataset',
+      liveDashboard: 'https://github.com/placeholder-dashboard'
+    }
   }
 ];
